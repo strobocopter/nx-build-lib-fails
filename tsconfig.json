@@ -17,10 +17,10 @@
     "baseUrl": ".",
     "paths": {
       "@stroboware/framework/utils": [
-        "libs/framework/utils/src/index.ts"
+        "dist/libs/framework/utils"
       ],
       "@stroboware/framework/tracing": [
-        "libs/framework/tracing/src/index.ts"
+        "dist/libs/framework/tracing"
       ]
     }
   },

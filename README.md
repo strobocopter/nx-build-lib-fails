@@ -1,11 +1,15 @@
 # BuildLibFails
 
-In this workspace it is possible to run "ng run utils:build", which will produce a publishable library.
+In this branch of the workspace it is possible to run "ng run framework-utils:build", which will produce a publishable library.
 
-Running "ng run tracing:build" will run into an error as the tracing library references the utils-library and the tsconfig.json points to its sources instead of the build-path.
+Running "ng run framework-tracing:build" will also build a publishable library, if 'framework-utils' was built before.
 
-Running "ng run test-frame:build" will succeed, but the angular-app will treat the source-code of both libraries as its own source-code.
-So the libraries included in this way will not be required as npm-packages.
+Running "ng run test-frame:build" will fail now, as the angular-app now tries to import the libraries as npm-packages but the generated code for the tracing lib contains errors:
+
+The generated code for the tracing-lib contains two imports:
+* @stroboware/framework/utils -> The import used in the typescript code which is mapped to the output-package (should not exist anymore)
+* @stroboware/framework-utils -> The name of the generated package (should be the only import)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
 
