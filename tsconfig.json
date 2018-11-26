@@ -16,6 +16,12 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@stroboware/framework/utils": [
+        "libs/framework/utils/src/index.ts"
+      ],
+      "@stroboware/framework/tracing": [
+        "libs/framework/tracing/src/index.ts"
+      ]
     }
   },
   "exclude": [

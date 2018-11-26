@@ -7,5 +7,18 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "framework-utils": {
+      "tags": []
+    },
+    "framework-tracing": {
+      "tags": []
+    },
+    "test-frame": {
+      "tags": []
+    },
+    "test-frame-e2e": {
+      "tags": []
+    }
+  }
 }
