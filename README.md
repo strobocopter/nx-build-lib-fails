@@ -1,8 +1,11 @@
 # BuildLibFails
 
 In this workspace it is possible to run "ng run utils:build", which will produce a publishable library.
-But running "ng run tracing:build" will run into an error as the tracing library references the utils-library.
-Running "ng run test-frame:build" will succeed again, as the angular-app will treat the source-code of both libraries as its own source-code. So the libraries included in this way will not be required as npm-packages.
+
+Running "ng run tracing:build" will run into an error as the tracing library references the utils-library and the tsconfig.json points to its sources instead of the build-path.
+
+Running "ng run test-frame:build" will succeed, but the angular-app will treat the source-code of both libraries as its own source-code.
+So the libraries included in this way will not be required as npm-packages.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) using [Nrwl Nx](https://nrwl.io/nx).
 
